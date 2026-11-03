@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan Silva — Gráficos</title>
+  <meta name="description" content="Gráfico de habilidades em canvas e gráfico de interesses em SVG.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-page="graficos">
+
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="index.html">Alan <span>Silva</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="curriculo.html">Currículo</a></li>
+          <li><a href="formulario.html">Contato</a></li>
+          <li><a href="multimidia.html">Multimídia</a></li>
+          <li><a href="graficos.html" aria-current="page">Gráficos</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Modo escuro</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="page-intro">
+        <p class="eyebrow">Gráficos</p>
+        <h1>Habilidades e interesses em números</h1>
+        <p>Dois gráficos autorais: um desenhado em <code>&lt;canvas&gt;</code> via JavaScript e outro em SVG estilizado com CSS.</p>
+      </div>
+
+      <div class="graphic-grid">
+
+      <section aria-labelledby="canvas-title">
+        <h2 id="canvas-title">Nível de habilidade por tecnologia</h2>
+        <article class="graphic-frame">
+          <canvas id="grafico-habilidades" width="640" height="320"
+                  aria-label="Gráfico de barras com o nível de habilidade em cada tecnologia, de 0 a 100">
+            Seu navegador não suporta o elemento canvas.
+          </canvas>
+          <p class="field-hint">Gráfico de barras desenhado dinamicamente em JavaScript a partir de dados de autoavaliação.</p>
+        </article>
+      </section>
+
+      <section aria-labelledby="svg-title">
+        <h2 id="svg-title">Distribuição de interesses</h2>
+        <article class="graphic-frame">
+          <svg viewBox="0 0 220 220" width="220" height="220" role="img"
+               aria-labelledby="svg-title svg-desc">
+            <desc id="svg-desc">Gráfico de rosca mostrando a distribuição de interesses de Alan: 40% desenvolvimento, 25% IA e automação, 15% hardware e 20% administração.</desc>
+            <g transform="rotate(-90 110 110)">
+              <circle class="donut-slice slice-dev" cx="110" cy="110" r="90"
+                      fill="none" stroke-width="28"
+                      stroke-dasharray="226.19 339.30" stroke-dashoffset="0"></circle>
+              <circle class="donut-slice slice-ia" cx="110" cy="110" r="90"
+                      fill="none" stroke-width="28"
+                      stroke-dasharray="141.37 424.12" stroke-dashoffset="-226.19"></circle>
+              <circle class="donut-slice slice-hw" cx="110" cy="110" r="90"
+                      fill="none" stroke-width="28"
+                      stroke-dasharray="84.82 480.67" stroke-dashoffset="-367.56"></circle>
+              <circle class="donut-slice slice-adm" cx="110" cy="110" r="90"
+                      fill="none" stroke-width="28"
+                      stroke-dasharray="113.10 452.39" stroke-dashoffset="-452.38"></circle>
+            </g>
+            <text x="110" y="105" text-anchor="middle" class="donut-label">Interesses</text>
+            <text x="110" y="124" text-anchor="middle" class="donut-sub">4 áreas</text>
+          </svg>
+
+          <ul class="legend">
+            <li><span class="swatch swatch-dev"></span>Desenvolvimento — 40%</li>
+            <li><span class="swatch swatch-ia"></span>IA &amp; automação — 25%</li>
+            <li><span class="swatch swatch-hw"></span>Hardware — 15%</li>
+            <li><span class="swatch swatch-adm"></span>Administração — 20%</li>
+          </ul>
+        </article>
+      </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Alan Silva — Projeto acadêmico (CP3).</p>
+      <p><a href="https://github.com/AqyyA" target="_blank" rel="noopener noreferrer">github.com/AqyyA</a></p>
+    </div>
+  </footer>
+
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
