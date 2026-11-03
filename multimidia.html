@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan Silva — Multimídia</title>
+  <meta name="description" content="Vídeo de apresentação e mapa de Alan Silva.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-page="multimidia">
+
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="index.html">Alan <span>Silva</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="curriculo.html">Currículo</a></li>
+          <li><a href="formulario.html">Contato</a></li>
+          <li><a href="multimidia.html" aria-current="page">Multimídia</a></li>
+          <li><a href="graficos.html">Gráficos</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Modo escuro</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="page-intro">
+        <p class="eyebrow">Multimídia</p>
+        <h1>Vídeo de apresentação e vídeo incorporado</h1>
+        <p>Um pequeno vídeo de abertura do portfólio e um vídeo do YouTube incorporado via <code>&lt;iframe&gt;</code>.</p>
+      </div>
+
+      <div class="media-grid">
+
+      <section aria-labelledby="video-title">
+        <h2 id="video-title">Vídeo de apresentação</h2>
+        <article class="media-frame">
+          <video controls preload="metadata">
+            <source src="img/intro.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeo. Você pode
+            <a href="img/intro.mp4">baixar o vídeo</a> para assisti-lo.
+          </video>
+          <p class="field-hint">Vídeo curto de abertura, produzido especialmente para este portfólio.</p>
+        </article>
+      </section>
+
+      <section aria-labelledby="destaque-title">
+        <h2 id="destaque-title">Vídeo em destaque</h2>
+        <article class="media-frame">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/_-58ZyifuR0"
+              title="Vídeo incorporado via iframe (YouTube)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="field-hint">
+            Vídeo incorporado diretamente do YouTube por meio de um <code>&lt;iframe&gt;</code>.
+          </p>
+        </article>
+      </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Alan Silva — Projeto acadêmico (CP3).</p>
+      <p><a href="https://github.com/AqyyA" target="_blank" rel="noopener noreferrer">github.com/AqyyA</a></p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
