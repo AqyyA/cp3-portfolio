@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan Silva — Contato</title>
+  <meta name="description" content="Formulário de contato de Alan Silva.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-page="formulario">
+
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="index.html">Alan <span>Silva</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="curriculo.html">Currículo</a></li>
+          <li><a href="formulario.html" aria-current="page">Contato</a></li>
+          <li><a href="multimidia.html">Multimídia</a></li>
+          <li><a href="graficos.html">Gráficos</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Modo escuro</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="page-intro">
+        <p class="eyebrow">Contato</p>
+        <h1>Vamos conversar</h1>
+        <p>Preencha o formulário abaixo para falar comigo sobre projetos, estágio ou colaborações.</p>
+      </div>
+
+      <section aria-labelledby="form-title">
+        <h2 id="form-title">Formulário de contato</h2>
+
+        <article class="form-card">
+          <form id="form-contato" action="#" method="post" novalidate>
+            <div id="form-feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+
+            <div class="form-grid">
+
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required minlength="3">
+              <p class="field-error" id="erro-nome" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+              <p class="field-error" id="erro-email" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678"
+                     pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$">
+              <p class="field-hint">Formato: (11) 91234-5678</p>
+              <p class="field-error" id="erro-telefone" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="data">Melhor data para retorno</label>
+              <input type="date" id="data" name="data">
+              <p class="field-error" id="erro-data" hidden></p>
+            </div>
+
+            </div>
+
+            <div class="field">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecione um assunto</option>
+                <option value="projeto">Proposta de projeto</option>
+                <option value="estagio">Oportunidade de estágio</option>
+                <option value="duvida">Dúvida sobre um trabalho</option>
+                <option value="outro">Outro assunto</option>
+              </select>
+              <p class="field-error" id="erro-assunto" hidden></p>
+            </div>
+
+            <fieldset class="field">
+              <legend>Forma de contato preferida</legend>
+              <div class="choice-row">
+                <input type="radio" id="pref-email" name="preferencia" value="email" checked>
+                <label for="pref-email">E-mail</label>
+              </div>
+              <div class="choice-row">
+                <input type="radio" id="pref-telefone" name="preferencia" value="telefone">
+                <label for="pref-telefone">Telefone</label>
+              </div>
+              <div class="choice-row">
+                <input type="radio" id="pref-whatsapp" name="preferencia" value="whatsapp">
+                <label for="pref-whatsapp">WhatsApp</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre o motivo do contato"
+                        required minlength="10" maxlength="500"></textarea>
+              <p class="field-hint"><span id="contador">0</span>/500 caracteres</p>
+              <p class="field-error" id="erro-mensagem" hidden></p>
+            </div>
+
+            <div class="field">
+              <div class="choice-row">
+                <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                <label for="newsletter">Quero receber novidades sobre meus projetos por e-mail</label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Enviar mensagem</button>
+              <button type="reset" class="btn btn-secondary">Limpar campos</button>
+            </div>
+
+          </form>
+        </article>
+      </section>
+
+      <section aria-labelledby="historico-title">
+        <h2 id="historico-title">Mensagens salvas neste navegador</h2>
+        <p class="field-hint">As mensagens enviadas ficam guardadas no <code>localStorage</code> e continuam aqui mesmo depois de fechar ou recarregar a página. O rascunho do formulário também é salvo automaticamente.</p>
+        <ul id="lista-mensagens" class="msg-list"></ul>
+        <p id="msg-vazia" class="field-hint">Nenhuma mensagem enviada ainda.</p>
+        <button type="button" class="btn btn-secondary" id="limpar-historico" hidden>Apagar todas as mensagens</button>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Alan Silva — Projeto acadêmico (CP3).</p>
+      <p><a href="https://github.com/AqyyA" target="_blank" rel="noopener noreferrer">github.com/AqyyA</a></p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
